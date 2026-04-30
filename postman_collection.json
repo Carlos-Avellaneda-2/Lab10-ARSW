@@ -1,0 +1,65 @@
+{
+  "info": {
+    "_postman_id": "d2f6dbb4-7f5c-4d0e-8f6c-8d8f4edb1a11",
+    "name": "Fibonacci-Tests",
+    "description": "Colección para probar la Azure Function de Fibonacci con Postman y Newman.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fibonacci",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"n\": {{n}}\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/Fibonacci",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "Fibonacci"
+          ]
+        },
+        "description": "Envía un número n al endpoint de Fibonacci y recibe el resultado calculado."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://functionprojectfibonacci3-eyf2cechdzdsaaat.eastus2-01.azurewebsites.net"
+    },
+    {
+      "key": "n",
+      "value": "1000000"
+    }
+  ],
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test('Status code is 200', function () {",
+          "  pm.response.to.have.status(200);",
+          "});",
+          "",
+          "pm.test('Response has a body', function () {",
+          "  pm.expect(pm.response.text()).to.not.equal('');",
+          "});"
+        ]
+      }
+    }
+  ]
+}
