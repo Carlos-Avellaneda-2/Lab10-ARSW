@@ -17,7 +17,7 @@ Carlos Avellaneda
 -  Buscar "Azure Functions"
 -  Instalar la extensión oficial de Microsoft
 
-![alt text](image.png)
+![alt text](images/image.png)
 -  Reiniciar VS Code si es necesario
 
 ### **PASO 3: Crear Function App en Azure Portal**
@@ -31,7 +31,7 @@ Carlos Avellaneda
   - **Plan**: Consumption (Serverless)
   - **Storage Account**: Crear nuevo
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 -  Esperar a que se complete el despliegue
 -  Anotar el nombre del Function App para pasos posteriores
 
@@ -57,16 +57,16 @@ Carlos Avellaneda
 
 ### **PASO 6: Desplegar Función a Azure**
 -  Buscar y ejecutar: "Azure Functions: Deploy to Function App"
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 -  Autenticarse con tu cuenta de Azure si se solicita
 -  Seleccionar la Function App creada en PASO 3
 -  Esperar a que se complete el despliegue
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 - Verificar el despliegue en el Azure Portal
 
 ### **PASO 7: Probar la Función en Azure Portal**
 -  Ir a Azure Portal → Tu Function App → Fibonacci
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 -  Usar la sección "Code + Test"
 -  Ejecutar con un valor de prueba (ej: `{"n": 10}`)
 -  Verificar que retorna el resultado correcto
@@ -151,7 +151,7 @@ Carlos Avellaneda
   - Promedio cold: 162.26 ms
   - Observacion: después del reinicio los tiempos fueron estables y menores que el promedio warm.
 
-  ![](image.png)
+  ![](/images/Readme/image-7.png)
 
 **Analisis de Resultados**:
 - Diferencia: el promedio cold fue 239.77 ms menor que el promedio warm.
